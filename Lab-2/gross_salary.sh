@@ -1,7 +1,7 @@
 #!bin/sh
 echo "Enter the basic salary"
 read basic
-da=`expr $basic \* 10 / 100`
-hra=`expr $basic \* 20 / 100`
-gross_sal=`expr $basic + $da + $hra`
+da=`echo "$basic * 0.1"|bc`
+hra=`echo "$basic * 0.2"|bc`
+gross_sal=`echo "$basic + $da + $hra"|bc`
 echo $gross_sal
